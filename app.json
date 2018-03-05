@@ -2,7 +2,7 @@
   "name": "Netbox",
   "description": "NetBox is an IP address management (IPAM) and data center infrastructure management (DCIM) tool.",
   "repository": "https://github.com/nomaster/netbox",
-  "logo": "https://github.com/nomaster/netbox/raw/heroku/docs/netbox_logo.png",
+  "logo": "https://raw.githubusercontent.com/nomaster/netbox/master/docs/netbox_logo.png",
   "keywords": ["netbox", "ipam", "dcim", "digitalocean"],
   "scripts": {
     "postdeploy": "./netbox/manage.py migrate && echo \"from django.contrib.auth.models import User; User.objects.create_superuser('${ADMIN_USER}', '${ADMIN_EMAIL}', '${ADMIN_PASSWORD}')\" | ./netbox/manage.py shell"
