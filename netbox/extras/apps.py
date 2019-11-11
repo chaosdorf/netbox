@@ -20,13 +20,7 @@ class ExtrasConfig(AppConfig):
                     "redis'.)"
                 )
             try:
-                rs = redis.Redis(
-                    host=settings.REDIS_HOST,
-                    port=settings.REDIS_PORT,
-                    db=settings.REDIS_DATABASE,
-                    password=settings.REDIS_PASSWORD or None,
-                    ssl=settings.REDIS_SSL,
-                )
+                rs = redis.Redis.from_url(REDIS_URL)
                 rs.ping()
             except redis.exceptions.ConnectionError:
                 raise ImproperlyConfigured(

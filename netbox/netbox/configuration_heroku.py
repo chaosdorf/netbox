@@ -21,6 +21,15 @@ DATABASE = dj_database_url.config()
 # https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-SECRET_KEY
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
+# Redis database settings. The Redis database is used for caching and background processing such as webhooks
+REDIS = {
+    'URL': os.environ.get('REDISCLOUD_URL', ''),
+    'DATABASE': 0,
+    'CACHE_DATABASE': 1,
+    'DEFAULT_TIMEOUT': 300,
+}
+
+
 #########################
 #                       #
 #   Optional settings   #

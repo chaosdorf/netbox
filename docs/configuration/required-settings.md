@@ -46,13 +46,9 @@ functionality (as well as other planned features).
 
 Redis is configured using a configuration setting similar to `DATABASE`:
 
-* `HOST` - Name or IP address of the Redis server (use `localhost` if running locally)
-* `PORT` - TCP port of the Redis service; leave blank for default port (6379)
-* `PASSWORD` - Redis password (if set)
-* `DATABASE` - Numeric database ID for webhooks
+* `URL` - URL to the Redis database
 * `CACHE_DATABASE` - Numeric database ID for caching
 * `DEFAULT_TIMEOUT` - Connection timeout in seconds
-* `SSL` - Use SSL connection to Redis
 
 Example:
 
